@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4iKoDNOwPeRvGSFLC0QWWFC8E1MNChWypuMrzscOlwg=",
+  "Hash": "HBTCBBMnnUNzbhNs7Tq6B0BG++EUkb4PwTUn7qK+hs8=",
   "Source": "SimpleFacebook",
   "BasePath": "_content/SimpleFacebook",
   "Mode": "Default",
@@ -17,10 +17,10 @@
   ],
   "Assets": [
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SimpleFacebook.styles.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SimpleFacebook.styles.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/SimpleFacebook",
       "RelativePath": "SimpleFacebook.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SimpleFacebook.styles.css"
+      "OriginalItemSpec": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\bundle\\SimpleFacebook.styles.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SimpleFacebook.bundle.scp.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SimpleFacebook.bundle.scp.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/SimpleFacebook",
       "RelativePath": "SimpleFacebook.bundle.scp.css",
       "AssetKind": "All",
@@ -52,10 +52,10 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SimpleFacebook.bundle.scp.css"
+      "OriginalItemSpec": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SimpleFacebook.bundle.scp.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\css\\site.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\css\\site.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -74,7 +74,7 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\favicon.ico",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\favicon.ico",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -93,7 +93,7 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\js\\site.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\js\\site.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -112,7 +112,7 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -131,7 +131,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -150,7 +150,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -169,7 +169,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -188,7 +188,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -207,7 +207,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -226,7 +226,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -245,7 +245,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -264,7 +264,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -283,7 +283,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -302,7 +302,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -321,7 +321,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -340,7 +340,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -359,7 +359,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -378,7 +378,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -397,7 +397,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -416,7 +416,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -435,7 +435,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -454,7 +454,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -473,7 +473,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -492,7 +492,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -511,7 +511,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -530,7 +530,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -549,7 +549,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -568,7 +568,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -587,7 +587,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -606,7 +606,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -625,7 +625,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -644,7 +644,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -663,7 +663,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -682,7 +682,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -701,7 +701,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -720,7 +720,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -739,7 +739,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -758,7 +758,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -777,7 +777,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -796,7 +796,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -815,7 +815,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -834,7 +834,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -853,7 +853,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -872,7 +872,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -891,7 +891,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -910,7 +910,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -929,7 +929,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -948,7 +948,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -967,7 +967,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -986,7 +986,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -1005,7 +1005,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -1024,7 +1024,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -1043,7 +1043,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -1062,7 +1062,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -1081,7 +1081,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -1100,7 +1100,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -1119,7 +1119,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -1138,7 +1138,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -1157,7 +1157,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
@@ -1176,7 +1176,7 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "d:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "SimpleFacebook",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",

@@ -5,6 +5,10 @@ VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleFacebook", "SimpleFacebook.csproj", "{5C598BAD-2761-46E9-ACAB-CBE87D4B2C54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "..\..\HelloWorld\HelloWorld.csproj", "{7DC86B14-273D-4ED5-9103-471732EA9D4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplicationSample", "..\..\WebApplicationSample\WebApplicationSample.csproj", "{9584B79A-5D7C-4C4D-90B8-DC5C774761FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{5C598BAD-2761-46E9-ACAB-CBE87D4B2C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C598BAD-2761-46E9-ACAB-CBE87D4B2C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C598BAD-2761-46E9-ACAB-CBE87D4B2C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DC86B14-273D-4ED5-9103-471732EA9D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DC86B14-273D-4ED5-9103-471732EA9D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DC86B14-273D-4ED5-9103-471732EA9D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DC86B14-273D-4ED5-9103-471732EA9D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9584B79A-5D7C-4C4D-90B8-DC5C774761FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9584B79A-5D7C-4C4D-90B8-DC5C774761FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9584B79A-5D7C-4C4D-90B8-DC5C774761FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9584B79A-5D7C-4C4D-90B8-DC5C774761FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
