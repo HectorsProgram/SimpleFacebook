@@ -1,8 +1,45 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+@model IEnumerable<SimpleFacebook.Models.Post>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h2 class="text-center my-4">News Feed</h2>
+
+<!-- Profile Picture Upload Form -->
+<div class="mb-4 text-end">
+    <form asp-action="UploadProfilePicture" asp-controller="Home" method="post" enctype="multipart/form-data">
+        <label for="profilePicture" class="form-label">Change Profile Picture:</label>
+        <input type="file" name="profilePicture" id="profilePicture" class="form-control d-inline-block w-auto" accept="image/*" required />
+        <button type="submit" class="btn btn-sm btn-secondary ms-2">Upload</button>
+    </form>
 </div>
+
+<!-- Form to create a new post -->
+<div class="card mb-4">
+    <div class="card-body">
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <textarea 
+                    name="Content" 
+                    class="form-control" 
+                    rows="3" 
+                    placeholder="What's on your mind?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Post</button>
+        </form>
+    </div>
+</div>
+
+<!-- News Feed Posts -->
+<ul class="list-group">
+    @foreach (var post in Model)
+    {
+        <li class="list-group-item">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <img src="@post.User?.ProfilePicturePath" alt="Profile Picture" class="rounded-circle me-2" style="width: 40px; height: 40px; object-fit: cover;">
+                    <strong>@post.User?.Username</strong>
+                </div>
+                <small class="text-muted">@post.CreatedAt.ToString("g")</small>
+            </div>
+            <p class="mb-1">@post.Content</p>
+        </li>
+    }
+</ul>

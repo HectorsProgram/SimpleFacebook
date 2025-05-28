@@ -1,0 +1,43 @@
+@model IEnumerable<SimpleFacebook.Models.User>
+
+@{
+    ViewData["Title"] = "Batch User Management";
+}
+
+<h2>Batch User Management</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Id</td>
+            <td>@user.Username</td>
+            <td>@user.Email</td>
+            <td>@user.Roles</td>
+            <td>
+                @if (user.Roles != "Admin")
+                {
+                    <form asp-action="MakeAdmin" asp-controller="Batch" method="post" style="display:inline">
+                        <input type="hidden" name="userId" value="@user.Id" />
+                        <button type="submit" class="btn btn-sm btn-warning">Make Admin</button>
+                    </form>
+                }
+                else
+                {
+                    <span class="badge bg-success">Admin</span>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

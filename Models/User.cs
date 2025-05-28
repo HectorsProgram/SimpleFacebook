@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -18,6 +17,9 @@ namespace SimpleFacebook.Models
         [Required]
         public string Password { get; set; }
 
+        public string ProfilePicturePath { get; set; } = "/uploads/profile-pictures/default.png";
+
+        public string Roles { get; set; } = "User"; // Default role
         //public ICollection<Post> Posts { get; set; }
     }
 }

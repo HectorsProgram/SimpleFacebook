@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<div class="container mt-4">
+    <!-- Profile Header -->
+    <div class="d-flex align-items-center mb-4">
+        <div class="profile-picture-placeholder rounded-circle me-3" style="width: 100px; height: 100px; background-color: #ccc;"></div>
+        <h1 class="display-6">Name</h1>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-tabs mb-4">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Previews</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Posts</a>
+        </li>
+    </ul>
+
+    <!-- Content Section -->
+    <div class="row">
+        <!-- Left Column -->
+        <div class="col-md-4">
+            <div class="placeholder-box mb-3" style="height: 150px; background-color: #eee;"></div>
+            <div class="placeholder-box mb-3" style="height: 50px; background-color: #eee;"></div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-md-8">
+            <div class="placeholder-box mb-3" style="height: 100px; background-color: #eee;"></div>
+            <div class="placeholder-box mb-3" style="height: 100px; background-color: #eee;"></div>
+            <div class="placeholder-box mb-3" style="height: 200px; background-color: #eee;"></div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .profile-picture-placeholder {
+        display: inline-block;
+        background-size: cover;
+        background-position: center;
+    }
+    .placeholder-box {
+        border: 1px solid #ddd;
+    }
+</style>

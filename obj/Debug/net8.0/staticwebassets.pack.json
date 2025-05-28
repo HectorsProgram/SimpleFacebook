@@ -245,6 +245,18 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\uploads\\profile-pictures\\default.png",
+      "PackagePath": "staticwebassets\\uploads\\profile-pictures\\default.png"
+    },
+    {
+      "Id": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\uploads\\profile-pictures\\user_1_perfect.jpg",
+      "PackagePath": "staticwebassets\\uploads\\profile-pictures\\user_1_perfect.jpg"
+    },
+    {
+      "Id": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\uploads\\profile-pictures\\user_1_unnamed (1).jpg",
+      "PackagePath": "staticwebassets\\uploads\\profile-pictures\\user_1_unnamed (1).jpg"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SimpleFacebook.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
