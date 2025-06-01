@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "y+4OXxtqs3KLCI44zk1XW1ZNASYWZya8Fztwkxh2weE=",
+  "Hash": "B29T4/YMuyzcSuol/hnM4gqIDVs8yRQKp4gtGyO96Ho=",
   "Source": "SimpleFacebook",
   "BasePath": "_content/SimpleFacebook",
   "Mode": "Default",
@@ -1212,6 +1212,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\default.png"
+    },
+    {
+      "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\uploads\\profile-pictures\\user_1_DSD_8326 (4).JPG",
+      "SourceId": "SimpleFacebook",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\",
+      "BasePath": "_content/SimpleFacebook",
+      "RelativePath": "uploads/profile-pictures/user_1_DSD_8326 (4).JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\profile-pictures\\user_1_DSD_8326 (4).JPG"
     },
     {
       "Identity": "D:\\PersonalFiles\\.NET projects\\SimpleFacebook\\SimpleFacebook\\wwwroot\\uploads\\profile-pictures\\user_1_perfect.jpg",
