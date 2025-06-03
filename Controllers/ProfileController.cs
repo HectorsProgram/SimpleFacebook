@@ -8,10 +8,13 @@ using System.Net.Mime;
 public class ProfileController : Controller
 {
     private readonly IPostService _postService;
+    private readonly ICommentService _commentService;
 
-    public ProfileController(IServiceProvider serviceProvider)
+    public ProfileController(IPostService postService,
+        ICommentService commentService)
     {
-        _postService = (IPostService?)serviceProvider.GetService(typeof(IPostService)) ?? throw new System.Exception("IPostService not registered");
+        _postService = postService ?? throw new System.Exception("IPostService not registered");
+        _commentService = commentService ?? throw new System.Exception("ICommentService not registered");
     }
 
     /// <summary>
@@ -20,6 +23,8 @@ public class ProfileController : Controller
     /// </summary>
     /// <param name="userId">The user's ID (optional).</param>
     /// <returns>The profile view with user and posts.</returns>
+    /// 
+    [HttpGet]
     public IActionResult Index(int? userId = null)
     {
         // Console.WriteLine($"ProfileController.Index called with userId: {userId}");
@@ -34,26 +39,21 @@ public class ProfileController : Controller
         }
         // return Content(userId.ToString());
 
-        // var user = _context.Users.FirstOrDefault(u => u.Id == userId.Value);
-        // if (user == null)
-        // {
-        //     return NotFound();
-        // }
-
-        // // Ensure the profile picture path is set
-        // if (string.IsNullOrEmpty(user.ProfilePicturePath))
-        // {
-        //     user.ProfilePicturePath = "/uploads/profile-pictures/default.png";
-        // }
 
         // Get posts for this user
         var posts = _postService.GetPosts(userId);
+
+        var postsWithComments = posts.Select(post => new PostWithCommentsViewModel
+        {
+            Post = post,
+            Comments = _commentService.GetCommentsByPost(post.PostId)
+        }).ToList();
 
         // Pass user and posts to the view using a ViewModel or ViewBag
         // ViewBag.User = user;
         // ViewBag.Posts = posts;
 
-        return View(posts);
+        return View(postsWithComments);
     }
 
     /// <summary>

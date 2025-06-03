@@ -37,6 +37,10 @@ namespace SimpleFacebook.Controllers
             return View(users);
         }
 
+        public IActionResult SampleView() {
+            // This is a placeholder for a sample view.
+            return View();
+        }
         /// <summary>
         /// Checks all users and sets the default profile picture path for those missing it.
         /// </summary>
