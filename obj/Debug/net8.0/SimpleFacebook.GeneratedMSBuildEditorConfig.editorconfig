@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\PersonalFiles\.NET projects\SimpleFacebook\SimpleFacebook
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/PersonalFiles/.NET projects/SimpleFacebook/SimpleFacebook/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/PersonalFiles/.NET projects/SimpleFacebook/SimpleFacebook/Views/Batch/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmF0Y2hcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

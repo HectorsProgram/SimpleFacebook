@@ -1,5 +1,7 @@
 @{
     ViewData["Title"] = "Profile";
+    ViewData["ReturnAction"] = "Index";
+    ViewData["ReturnController"] = "Profile";
     var firstPost = Model.FirstOrDefault().Post;
     var profilePic = firstPost?.User?.ProfilePicturePath ?? "/images/default.png";
     var userName = firstPost?.User?.Username ?? "User";

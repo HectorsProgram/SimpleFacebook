@@ -52,10 +52,21 @@
                     <li class="nav-item px-2">
                         <a class="nav-link" asp-area="" asp-controller="Profile" asp-action="Index">Profile</a>
                     </li>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="notificationsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+    🔔 Notifications
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="notificationsDropdown">
+    <li><a class="dropdown-item" href="#">Notification 1</a></li>
+    <li><a class="dropdown-item" href="#">Notification 2</a></li>
+    <li><a class="dropdown-item" href="#">Notification 3</a></li>
+  </ul>
+</div>
+
+
                     <li class="nav-item px-2">
-                        <form method="post" asp-controller="User" asp-action="Logout">
-                            <button type="submit" class="btn btn-link nav-link p-0">Logout</button>
-                        </form>
+                        <a class="nav-link" asp-controller="User" asp-action="Logout">Logout</a>
                     </li>
                 </ul>
             </div>

@@ -11,7 +11,7 @@ namespace SimpleFacebook.Services
     {
         IEnumerable<Post> GetPosts(int? userId);
         Post? GetPostById(int postId);
-        // void AddPost(Post post);
+        void AddPost(Post post);
         // void DeletePost(int postId);
     }
 
@@ -28,7 +28,7 @@ namespace SimpleFacebook.Services
         {
             if (userId == null)
             {
-                return _context.Posts.OrderByDescending(p => p.CreatedAt).ToList();
+                return _context.Posts.Include(p => p.User).OrderByDescending(p => p.CreatedAt).ToList();
             }
             return _context.Posts
     .Include(p => p.User)                          // Include the related User
@@ -46,7 +46,7 @@ namespace SimpleFacebook.Services
         {
             if (post == null) throw new ArgumentNullException(nameof(post));
             _context.Posts.Add(post);
-            _context.SaveChanges();
+            _context.SaveChangesAsync();
         }
 
         public void DeletePost(int postId)

@@ -1,0 +1,36 @@
+@model List<SimpleFacebook.Models.User>
+
+@{
+    ViewData["Title"] = "Users List";
+}
+
+<h2>All Users</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Roles</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.Username</td>
+                <td>@user.Email</td>
+                <td>@user.Roles</td>
+                <td>
+                    <form asp-action="PiggyBackUser" asp-controller="Admin" method="post" style="display:inline;">
+                        <input type="hidden" name="userId" value="@user.Id" />
+                        <button type="submit" class="btn btn-sm btn-warning">Piggy Back User</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
