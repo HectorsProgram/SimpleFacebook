@@ -25,7 +25,7 @@
                 <td>@user.Email</td>
                 <td>@user.Roles</td>
                 <td>
-                    <form asp-action="PiggyBackUser" asp-controller="Admin" method="post" style="display:inline;">
+                    <form asp-area="Admin" asp-action="PiggyBackUser" asp-controller="Admin" method="post" style="display:inline;">
                         <input type="hidden" name="userId" value="@user.Id" />
                         <button type="submit" class="btn btn-sm btn-warning">Piggy Back User</button>
                     </form>

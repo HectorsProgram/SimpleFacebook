@@ -27,7 +27,7 @@
             <td>
                 @if (user.Roles != "Admin")
                 {
-                    <form asp-action="MakeAdmin" asp-controller="Batch" method="post" style="display:inline">
+                    <form asp-area="Notifications" asp-action="MakeAdmin" asp-controller="Batch" method="post" style="display:inline">
                         <input type="hidden" name="userId" value="@user.Id" />
                         <button type="submit" class="btn btn-sm btn-warning">Make Admin</button>
                     </form>

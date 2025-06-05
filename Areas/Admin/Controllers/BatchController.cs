@@ -4,12 +4,13 @@ using SimpleFacebook.Data;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SimpleFacebook.Controllers
+namespace SimpleFacebook.Areas.Admin.Controllers
 {
     /// <summary>
     /// Controller for batch processing operations. Only authorized users can access these endpoints.
     /// </summary>
 
+    [Area("Admin")]
     [Authorize(Roles = "Admin")]
     public class BatchController : Controller
     {
@@ -57,7 +58,7 @@ namespace SimpleFacebook.Controllers
             }
             int updatedCount = await _context.SaveChangesAsync();
             ViewBag.UpdatedCount = usersToUpdate.Count;
-            return RedirectToAction("Index", "Post");
+            return RedirectToAction("Index", "Post", new { area = "" });
         }
 
         /// <summary>
