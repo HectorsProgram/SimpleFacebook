@@ -1,1 +1,32 @@
+# Ignore user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build outputs
+bin/
+obj/
+out/
+
+# Ignore Visual Studio cache
+.vscode/
+.vs/
+
+# Ignore secrets and environment files
 appsettings.Development.json
+*.env
+secrets.json
+
+# Ignore logs
+*.log
+
+# Ignore published files
+publish/
+
+# Ignore Rider IDE files
+.idea/
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
