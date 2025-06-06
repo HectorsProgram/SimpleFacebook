@@ -56,18 +56,47 @@
                     <button id="notificationButton">🔔 Notifications</button>
                     <div id="notificationPopup" style="display:none;"></div>
 
+                    <style>
+                        #notificationPopup {
+                            position: absolute;
+                            top: 40px;
+                            /* Adjust depending on your navbar */
+                            right: 10px;
+                            background-color: #fff;
+                            border: 1px solid #ddd;
+                            width: 350px;
+                            max-height: 400px;
+                            overflow-y: auto;
+                            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                            z-index: 9999;
+                            border-radius: 8px;
+                            padding: 15px;
+                            font-family: sans-serif;
+                        }
+                    </style>
+
                     <script>
                         document.getElementById("notificationButton").addEventListener("click", function () {
                             const popup = document.getElementById("notificationPopup");
 
                             if (popup.style.display === "none") {
-                                fetch("/Notification/GetNotifications")
+                                fetch("/Header/Index")
                                     .then(response => response.text())
                                     .then(html => {
                                         popup.innerHTML = html;
                                         popup.style.display = "block";
                                     });
                             } else {
+                                popup.style.display = "none";
+                            }
+                        });
+
+                        document.addEventListener("click", function (event) {
+                            const popup = document.getElementById("notificationPopup");
+                            const button = document.getElementById("notificationButton");
+
+                            // If click is outside the popup and not on the button
+                            if (!popup.contains(event.target) && !button.contains(event.target)) {
                                 popup.style.display = "none";
                             }
                         });

@@ -15,10 +15,7 @@ document.getElementById("notificationButton").addEventListener("click", function
 });
 
 /*
-sort controller/views using Areas
-make partial view
-make js file
-make controller
+
 make notification model
 add to appdbcontext
 migrate/database update
