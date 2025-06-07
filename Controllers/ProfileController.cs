@@ -28,7 +28,7 @@ public class ProfileController : Controller
     public IActionResult Index(int? userId = null)
     {
         // Console.WriteLine($"ProfileController.Index called with userId: {userId}");
-
+        Console.WriteLine($"ProfileController.Index called with userId: {userId}");
         // If no userId is provided, try to get the current user from session/claims
         if (userId == null)
         {
@@ -39,7 +39,7 @@ public class ProfileController : Controller
         }
         // return Content(userId.ToString());
 
-
+        Console.WriteLine($"ProfileController.Index called with userId: {userId}");
         // Get posts for this user
         var posts = _postService.GetPosts(userId);
 
