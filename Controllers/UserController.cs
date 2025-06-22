@@ -63,12 +63,14 @@ namespace SimpleFacebook.Controllers
                 HttpContext.Session.SetInt32("UserId", adminUser.Id);
                 var claims = new List<Claim>
                 {
+                    new Claim(ClaimTypes.NameIdentifier, adminUser.Id.ToString()),
                     new Claim(ClaimTypes.Name, adminUser.Username),
                     new Claim(ClaimTypes.Role, adminUser.Roles)
                 };
+                // Console.WriteLine($"Auto-logging in as admin: {adminUser.Id.ToString()} - {adminUser.Username}");
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
                 var principal = new ClaimsPrincipal(identity);
-                HttpContext.SignInAsync(principal).Wait();
+                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal).Wait();
                 return RedirectToAction("Index", "Home");
             }
             // */

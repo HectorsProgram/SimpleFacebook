@@ -11,6 +11,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<IPostService, PostService>();
 builder.Services.AddScoped<ICommentService, CommentService>();
+builder.Services.AddScoped<IFriendService, FriendService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -41,6 +42,24 @@ if (!app.Environment.IsDevelopment())
 
 
 app.UseSession();
+
+if (app.Environment.IsDevelopment())
+{
+    app.Use(async (context, next) =>
+    {
+        foreach (var key in context.Session.Keys)
+        {
+            var val = context.Session.GetString(key);
+            val = !string.IsNullOrEmpty(val) ? "null" : val;
+            Console.WriteLine($"Session [{key}] String = {val}");
+            val = context.Session.GetInt32(key)?.ToString() ?? "null";
+            Console.WriteLine($"Session [{key}] Int = {val}");
+        }
+
+        await next();
+    });
+}
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 

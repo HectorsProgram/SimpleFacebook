@@ -5,7 +5,7 @@
 namespace SimpleFacebook.Migrations
 {
     /// <inheritdoc />
-    public partial class RenameComments : Migration
+    public partial class TestDrop : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

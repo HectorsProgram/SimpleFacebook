@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using SimpleFacebook.Models;
+using SimpleFacebook.Models.Friend;
 
 namespace SimpleFacebook.Data
 {
@@ -12,5 +13,6 @@ namespace SimpleFacebook.Data
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Notification> Notifications { get; set; } // Optional, for notifications
         public DbSet<Like> Likes { get; set; } // Optional
+        public DbSet<Friendships> Friendships { get; set; } // For friend requests
     }
 }

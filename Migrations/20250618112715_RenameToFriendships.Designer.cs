@@ -11,8 +11,8 @@ using SimpleFacebook.Data;
 namespace SimpleFacebook.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250603110311_RenameComments")]
-    partial class RenameComments
+    [Migration("20250618112715_RenameToFriendships")]
+    partial class RenameToFriendships
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,6 +48,34 @@ namespace SimpleFacebook.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("SimpleFacebook.Models.Friend.Friendships", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ReceiverId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SenderId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("SentTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReceiverId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("Friendships");
+                });
+
             modelBuilder.Entity("SimpleFacebook.Models.Like", b =>
                 {
                     b.Property<int>("Id")
@@ -67,6 +95,42 @@ namespace SimpleFacebook.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Likes");
+                });
+
+            modelBuilder.Entity("SimpleFacebook.Models.Notification", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Message")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ReceiverId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("SenderId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Type")
+                        .HasMaxLength(50)
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReceiverId");
+
+                    b.HasIndex("SenderId");
+
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("SimpleFacebook.Models.Post", b =>
@@ -142,6 +206,25 @@ namespace SimpleFacebook.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("SimpleFacebook.Models.Friend.Friendships", b =>
+                {
+                    b.HasOne("SimpleFacebook.Models.User", "Receiver")
+                        .WithMany()
+                        .HasForeignKey("ReceiverId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SimpleFacebook.Models.User", "Sender")
+                        .WithMany()
+                        .HasForeignKey("SenderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Receiver");
+
+                    b.Navigation("Sender");
+                });
+
             modelBuilder.Entity("SimpleFacebook.Models.Like", b =>
                 {
                     b.HasOne("SimpleFacebook.Models.Post", "Post")
@@ -159,6 +242,23 @@ namespace SimpleFacebook.Migrations
                     b.Navigation("Post");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("SimpleFacebook.Models.Notification", b =>
+                {
+                    b.HasOne("SimpleFacebook.Models.User", "Receiver")
+                        .WithMany()
+                        .HasForeignKey("ReceiverId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("SimpleFacebook.Models.User", "Sender")
+                        .WithMany()
+                        .HasForeignKey("SenderId");
+
+                    b.Navigation("Receiver");
+
+                    b.Navigation("Sender");
                 });
 
             modelBuilder.Entity("SimpleFacebook.Models.Post", b =>

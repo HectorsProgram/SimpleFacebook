@@ -10,6 +10,7 @@ namespace SimpleFacebook.Services
     public interface ICommentService
     {
         IEnumerable<Comment> GetCommentsByPost(int postId);
+        Task<List<Comment>> GetCommentsByUserPosts(List<int> postIds);
         Comment? GetCommentById(int commentId);
         void AddComment(Comment comment);
         void DeleteComment(int commentId);
@@ -33,6 +34,12 @@ namespace SimpleFacebook.Services
                 .ToList();
         }
 
+        public async Task<List<Comment>> GetCommentsByUserPosts(List<int> postIds)
+        {
+            return await _context.Comments
+                .Where(c => postIds.Contains(c.PostId))
+                .ToListAsync();
+        }
         public Comment? GetCommentById(int commentId)
         {
             return _context.Comments

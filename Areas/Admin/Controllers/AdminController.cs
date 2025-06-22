@@ -33,6 +33,16 @@ namespace SimpleFacebook.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> ClearFriendRequests()
+        {
+            _context.Friendships.RemoveRange(_context.Friendships);
+            await _context.SaveChangesAsync();
+
+            return Ok("FriendRequests table cleared successfully.");
+        }
+
+        [HttpPost]
         public IActionResult StopImpersonating()
         {
             HttpContext.Session.Remove("ImpersonatedUserId");

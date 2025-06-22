@@ -22,6 +22,7 @@ public class HeaderController : Controller
 
     public async Task<IActionResult> OpenNotifications()
     {
+        
         // This is a placeholder for the OpenNotifications functionality.
         // It could be used to display notifications for the logged-in user.
         return PartialView("_NotificationsPartial");

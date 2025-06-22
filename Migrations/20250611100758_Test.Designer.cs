@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SimpleFacebook.Data;
 
@@ -10,9 +11,11 @@ using SimpleFacebook.Data;
 namespace SimpleFacebook.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250611100758_Test")]
+    partial class Test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.10");
@@ -45,7 +48,7 @@ namespace SimpleFacebook.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("SimpleFacebook.Models.Friend.Friendships", b =>
+            modelBuilder.Entity("SimpleFacebook.Models.Friend.FriendshipStuff", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -70,7 +73,7 @@ namespace SimpleFacebook.Migrations
 
                     b.HasIndex("SenderId");
 
-                    b.ToTable("Friendships");
+                    b.ToTable("FriendshipStuffs");
                 });
 
             modelBuilder.Entity("SimpleFacebook.Models.Like", b =>
@@ -203,7 +206,7 @@ namespace SimpleFacebook.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("SimpleFacebook.Models.Friend.Friendships", b =>
+            modelBuilder.Entity("SimpleFacebook.Models.Friend.FriendshipStuff", b =>
                 {
                     b.HasOne("SimpleFacebook.Models.User", "Receiver")
                         .WithMany()
