@@ -52,8 +52,9 @@
                     <li class="nav-item px-2">
                         <a class="nav-link" asp-area="" asp-controller="Profile" asp-action="ProfileIndex">Profile</a>
                     </li>
-
-                    <button id="notificationButton">🔔 Notifications</button>
+                    <li class="nav-item px-2">
+                        <a class="nav-link" href="#" id="notificationButton">🔔</a>
+                    </li>
                     <div id="notificationPopup" style="display:none;"></div>
 
                     <style>
@@ -79,14 +80,21 @@
                         document.getElementById("notificationButton").addEventListener("click", function () {
                             const popup = document.getElementById("notificationPopup");
 
-                            if (popup.style.display === "none") {
-                                fetch("/Header/Index")
+                            // If popup is hidden, fetch and show
+                            if (popup.style.display === "none" || popup.innerHTML.trim() === "") {
+                                fetch("/Header/OpenNotifications")
                                     .then(response => response.text())
                                     .then(html => {
                                         popup.innerHTML = html;
                                         popup.style.display = "block";
+                                    })
+                                    .catch(error => {
+                                        console.error("Failed to load notifications:", error);
+                                        popup.innerHTML = "<div style='color:red;'>Error loading notifications</div>";
+                                        popup.style.display = "block";
                                     });
                             } else {
+                                // If visible, just hide
                                 popup.style.display = "none";
                             }
                         });

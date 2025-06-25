@@ -1,69 +1,7 @@
 /*
 
-<button id="friendBtn" class="btn btn-primary btn-sm" onclick="toggleFriendAppearance(this)">
-    Add Friend
-</button>
-
-ask gpt what if i want another button to respond to onclick event of this button
-
-<script>
-    function toggleFriendAppearance(button) {
-        if (button.innerText === "Add Friend") {
-            button.innerText = "Cancel Request";
-            button.classList.remove("btn-primary");
-            button.classList.add("btn-secondary");
-        } else {
-            button.innerText = "Add Friend";
-            button.classList.remove("btn-secondary");
-            button.classList.add("btn-primary");
-        }
-    }
-</script>
 
 
-
-
-
-
-<button id="friendBtn"
-        class="btn btn-primary btn-sm"
-        data-user-id="@Model.ProfileOwnerId"
-        data-status="notSent"
-        onclick="toggleFriendRequest(this)">
-    Add Friend
-</button>
-
-<script>
-    async function toggleFriendRequest(button) {
-        const userId = button.getAttribute("data-user-id");
-        let status = button.getAttribute("data-status");
-
-        try {
-            const response = await fetch(`/Friendship/ToggleRequest/${userId}`, {
-                method: 'POST'
-            });
-
-            if (!response.ok) throw new Error("Server error");
-
-            const result = await response.json();
-
-            if (result.status === "sent") {
-                button.innerText = "Cancel Request";
-                button.classList.remove("btn-primary");
-                button.classList.add("btn-secondary");
-                button.setAttribute("data-status", "sent");
-            } else {
-                button.innerText = "Add Friend";
-                button.classList.remove("btn-secondary");
-                button.classList.add("btn-primary");
-                button.setAttribute("data-status", "notSent");
-            }
-        } catch (err) {
-            alert("Something went wrong.");
-            console.error(err);
-        }
-    }
-</script>
 
 
 
@@ -71,67 +9,86 @@ ask gpt what if i want another button to respond to onclick event of this button
 
 /*
 
+(DONE)
 
+LOGIN PAGE 
+using google account api to register ✅ Core
+register with active email. eg. yahoo.com, gmail.com, hotmail.com ✅ Core
+claims based authentication ✅ Core
+authentication login page using claims ✅ Core
 
+HEADER
+comment notification ✅ Core 
+logout functionality ✅ Core
+=to profile button ✅ Core
+=logout button ✅ Core
+4. Notifications (Friend-Related Only) 
+🟢Notify when someone sends a request ✅ Core 
+🟢Notify when a request is accepted ✅ Core 
+user search ✅ Core
 
-add toggle response method to controller
-use toggle respond in view
-make js dropdown to let the added either confirm or delete request
-add "respond" button if added by a profile
-
-view needs to check if theres a pending friend request before showing the button
-system creates/removes friend request in during friend request toggle
-
-
-system creates notification for friend request in SendFriendRequest method in FriendService
-system notifies receiver
-receiver accepts friend request
-system makes friend
-
-make seed data for entire user model
-delete migrations and reset to start fresh
-
-
-add friend sevice
-unfreind function
-
-
-code business logic to handle the notification popup for friend requests
-load the notifications from the database and display them in popup
-
-people you may know dropdown in profile page
- 
-put claims to access logined current user id instead of using session
-
-make profile service/profile controller to get info from user model not from post model
-
-in comment service, get comments by user posts to solve n+1 problem
-
-User Profiles
-View your own profile & others’
-Profile picture, username, basic info
-Edit your own profile
-
-2. Posts & Comments
-Create posts
-Comment on posts
-View all posts on profile pages
-Optional: Like/Unlike
+PROFILE
+User Profiles. first last name, number of friends ✅ Core ⌛⌛⌛⌛⌛⌛⌛⌛
+=cover photo/edit cover photo ✅ Core
+=edit profile button ✅ Core
+change Profile picture functnality ✅ Core
+Edit your own profile info ✅ Core
+intro section profile view ✅ Core
+=bio/edit bio ✅ Core
+=birthdate ✅ Core
+=links ✅ Core
+=lives in ✅ Core
+photos section ✅ Core
 
 3. Friend System
-Send/cancel friend requests
-Accept/reject requests
-View friends list
-Conditional UI: Add friend / Friends / Cancel request
+🟢Send/cancel friend requests ✅ Core 
+🟢Accept/reject requests ✅ Core 
+see all friends tab in profile view/unfriend functionality ✅ Core
+View friends list in profile view ✅ Core
+Conditional UI: Add friend / Friends / Cancel request ✅ Core
+accept/reject requests from notifications ✅ Core
 
-4. Notifications (Friend-Related Only)
-Notify when someone sends a request
-Notify when a request is accepted
-Optional: Mark as read / unread
+WALL
+profile route left side ✅ Core
+chat gpt as meta ai api left side ✅ Core
 
-5. Basic Messaging (Optional or Placeholder)
-Just a placeholder chat or one-way messaging for now
-Doesn’t have to be real-time
-Could be: “Leave a message” button that saves messages
+SHARED PAGE
+2. Posts & Comments
+🟢Create posts ✅ Core 
+🟢Comment on posts ✅ Core 
+🟢View all posts on profile pages ✅ Core 
+posts with videos/images ✅ Core
+Optional: Like/Unlike ✅ Core
+5. Basic Messaging (Optional or Placeholder) 
+clone ui design from actual facebook site ✅ Core
+
+people you may know after scrolling through 7-10 posts 🟡 Strong
+contacts right side 🟡 Strong
+=see all photos route to photos page 🟡 Strong
+share post functionality 🟡 Strong
+Optional: Mark as read / unread 🟡 Strong
+delete notifications 🟡 Strong
+photos gallery tab profile view 🟡 Strong
+video gallery tab profile view 🟡 Strong
+=show featured collections just one 🟡 Strong
+=feature/unfeature image/vid 🟡 Strong
+photo view page 🟡 Strong
+video view page 🟡 Strong
+
+=add to story button 🔴 Overkill
+=delete featured 🔴 Overkill
+=feature past story 🔴 Overkill
+=upload featured image/vid 🔴 Overkill
+STORY
+create text story 🔴 Overkill
+-background color 5 options 🔴 Overkill
+-text option 5 options 🔴 Overkill
+create photo story 🔴 Overkill
+-add text option 5 options 🔴 Overkill
+Just a placeholder chat or one-way messaging for now 🔴 Overkill
+Doesn’t have to be real-time 🔴 Overkill
+Could be: “Leave a message” button that saves messages 🔴 Overkill
+create story 🔴 Overkill
+wall stories 🔴 Overkill
 
 */

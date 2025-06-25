@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
+
 using SimpleFacebook.Data;
 using SimpleFacebook.Models;
 using SimpleFacebook.Services;
+using SimpleFacebook.DTOs;
 using System.Linq;
 using System.Net.Mime;
 using System.Security.Claims;
@@ -12,14 +14,21 @@ public class ProfileController : Controller
     private readonly IPostService _postService;
     private readonly ICommentService _commentService;
     private readonly IFriendService _friendService;
+    private readonly IUserService _userService;
+    private readonly IWebHostEnvironment _env; // ✅ add this
 
-    public ProfileController(IPostService postService,
+    public ProfileController(
+        IPostService postService,
         ICommentService commentService,
-        IFriendService friendService)
+        IFriendService friendService,
+        IUserService userService,
+        IWebHostEnvironment env) // ✅ inject here
     {
         _postService = postService ?? throw new System.Exception("IPostService not registered");
         _commentService = commentService ?? throw new System.Exception("ICommentService not registered");
         _friendService = friendService ?? throw new System.Exception("IFriendService not registered");
+        _userService = userService ?? throw new System.Exception("IUserService not registered");
+        _env = env ?? throw new System.Exception("IWebHostEnvironment not registered"); // ✅ store it
     }
 
     /// <summary>
@@ -55,7 +64,7 @@ public class ProfileController : Controller
             CurrentUserId = HttpContext.Session.GetInt32("UserId"),
             // CurrentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value),
             Post = post,
-            Comments = _commentService.GetCommentsByPost(post.PostId)
+            Comments = _commentService.GetCommentsByPost(post.Id)
         }).ToList();
 
         int currentUserId = HttpContext.Session.GetInt32("UserId")!.Value;
@@ -89,6 +98,65 @@ public class ProfileController : Controller
         return View(userProfileModel);
     }
 
+    [HttpGet]
+    public async Task<IActionResult> LoadEditModal()
+    {
+        int? userId = HttpContext.Session.GetInt32("UserId");
+        // int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+
+        if (userId == null)
+            return Unauthorized();
+
+        var dto = await _userService.GetUserProfileAsync(userId.Value);
+        return PartialView("_EditProfileModal", dto);
+    }
+
+
+    [HttpPost]
+    public async Task<IActionResult> UpdateProfile(EditProfileDto dto, IFormFile? ProfilePicture)
+    {
+        if (!ModelState.IsValid)
+        {
+            return PartialView("_EditProfileModal", dto);
+        }
+
+        int? userId = HttpContext.Session.GetInt32("UserId");
+        // int userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)!.Value);
+
+        if (userId == null)
+            return Unauthorized();
+
+        string? newProfilePicPath = null;
+
+        if (ProfilePicture != null && ProfilePicture.Length > 0)
+        {
+            var uploadsDir = Path.Combine(_env.WebRootPath, "uploads/profile-pictures");
+            Directory.CreateDirectory(uploadsDir);
+
+            var fileName = Guid.NewGuid() + Path.GetExtension(ProfilePicture.FileName);
+            var filePath = Path.Combine(uploadsDir, fileName);
+
+            using (var stream = new FileStream(filePath, FileMode.Create))
+            {
+                await ProfilePicture.CopyToAsync(stream);
+            }
+
+            newProfilePicPath = "/uploads/profile-pictures/" + fileName;
+        }
+
+        try
+        {
+            await _userService.UpdateUserDataAsync(userId.Value, dto, newProfilePicPath);
+            TempData["Success"] = "Profile updated!";
+            return RedirectToAction("ProfileIndex");
+        }
+        catch (Exception ex)
+        {
+            ModelState.AddModelError("", ex.Message);
+            return PartialView("_EditProfileModal", dto);
+        }
+    }
+
     public async Task<IActionResult> UnfriendUserProfile(int? Id = null, int? RequestId = null)
     {
         // If no RequestId is provided, return BadRequest
@@ -96,7 +164,7 @@ public class ProfileController : Controller
             return BadRequest("RequestId is required");
 
         // Unfriend the user by calling the service
-    
+
         _friendService.UnfriendUser(RequestId);
 
         return RedirectToAction("ProfileIndex", new { userId = Id });
@@ -108,7 +176,7 @@ public class ProfileController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> RespondToRequest([FromBody] FriendRequestActionDto model)
     {
-        
+
         await _friendService.AcceptFriendRequestAsync(model.RequestId);
 
         if (model.Action == "confirm")

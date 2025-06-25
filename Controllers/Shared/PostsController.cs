@@ -31,7 +31,7 @@ public class PostsController : Controller
         var postsWithComments = posts.Select(post => new PostWithCommentsViewModel
         {
             Post = post,
-            Comments = _commentService.GetCommentsByPost(post.PostId),
+            Comments = _commentService.GetCommentsByPost(post.Id),
         }).ToList();
 
         return View(postsWithComments);

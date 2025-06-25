@@ -37,7 +37,7 @@ function createFriendsContainer(ownerID, requestId) {
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById("friendContainer");
     if (container) {
-        const btn = createFriendsContainer(container.getAttribute("data-user-id"), container.getAttribute("data-request-id"));
+        const btn = createFriendsContainer(container.getAttribute("data-user -id"), container.getAttribute("data-request-id"));
         container.appendChild(btn);
     }
 });

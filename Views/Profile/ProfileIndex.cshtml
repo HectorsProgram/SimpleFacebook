@@ -7,11 +7,15 @@
     var firstPost = ownerPosts?.FirstOrDefault().Post;
     var profilePic = firstPost?.User?.ProfilePicturePath ?? "/images/default.png";
     var userName = firstPost?.User?.Username ?? "User";
-    <script src="~/js/profile/friendResponse.js"></script>
-    <script src="~/js/profile/friends.js"></script>
+    var firstName = firstPost?.User?.FirstName ?? "User";
+    var lastName = firstPost?.User?.LastName ?? "User";
+
 }
 
-
+    <script src="~/js/profile/friendResponse.js"></script>
+    <script src="~/js/profile/friends.js"></script>
+    <script src="~/js/profile/editProfile.js"></script>
+    
 @model SimpleFacebook.Models.UserProfileViewModel
 
 
@@ -33,7 +37,7 @@
                     </div>
 
                     <!-- Username -->
-                    <h2 class="ms-3 mb-0 text-dark">@userName</h2>
+                    <h2 class="ms-3 mb-0 text-dark">@firstName @lastName</h2>
                 </div>
 
                 <!-- Buttons -->
@@ -42,7 +46,8 @@
     {
         <!-- Own profile -->
         <button class="btn btn-outline-secondary btn-sm">Add to Story</button>
-        <button class="btn btn-light btn-sm">Edit Profile</button>
+        <button class="btn btn-light btn-sm" onclick="loadAndOpenModal()">Edit Profile</button>
+        <div id="modalContainer"></div>
     }
 
     else

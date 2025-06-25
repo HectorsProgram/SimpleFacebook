@@ -9,7 +9,7 @@ namespace SimpleFacebook.Models
         public int Id { get; set; }
 
         [Required]
-        public int UserId { get; set; }
+        public int Username { get; set; }
 
         [Required]
         public int PostId { get; set; }

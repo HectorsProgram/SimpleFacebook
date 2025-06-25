@@ -39,7 +39,7 @@ namespace SimpleFacebook.Services
 
         public Post? GetPostById(int postId)
         {
-            return _context.Posts.FirstOrDefault(p => p.PostId == postId);
+            return _context.Posts.FirstOrDefault(p => p.Id == postId);
         }
 
         public void AddPost(Post post)
@@ -51,7 +51,7 @@ namespace SimpleFacebook.Services
 
         public void DeletePost(int postId)
         {
-            var post = _context.Posts.FirstOrDefault(p => p.PostId == postId);
+            var post = _context.Posts.FirstOrDefault(p => p.Id == postId);
             if (post != null)
             {
                 _context.Posts.Remove(post);

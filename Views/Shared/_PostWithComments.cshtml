@@ -15,7 +15,7 @@
             </a>
             <a href="@Url.Action("ProfileIndex", "Profile", new { userId = Model.Post.User?.Id })"
                 style="text-decoration: none; color: inherit;" class="d-flex align-items-center">
-                <strong>@Model.Post.User?.Username</strong>
+                <strong>@Model.Post.User?.FirstName @Model.Post.User?.LastName</strong>
             </a>
         </div>
         <small class="text-muted">@Model.Post.CreatedAt.ToString("g")</small>
@@ -33,7 +33,7 @@
                 </a>
                 <a href="@Url.Action("ProfileIndex", "Profile", new { userId = comment.User?.Id })"
                     style="text-decoration: none; color: inherit;" class="d-flex align-items-center">
-                    <strong>@comment.User?.Username</strong>
+                    <strong>@comment.User?.FirstName @comment.User?.LastName</strong>
                 </a>
             </div>
             <p class="ms-5">@comment.Content</p>
@@ -42,7 +42,7 @@
 
         <!-- New Comment Form -->
     <form method="post" asp-controller="Comments" asp-action="AddComment">
-        <input type="hidden" name="PostId" value="@Model.Post.PostId" />
+        <input type="hidden" name="PostId" value="@Model.Post.Id" />
         <input type="hidden" name="returnAction" value="@returnAction" />
         <input type="hidden" name="returnController" value="@returnController" />
         <div class="input-group">

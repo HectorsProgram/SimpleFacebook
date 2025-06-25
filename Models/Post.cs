@@ -7,7 +7,7 @@ namespace SimpleFacebook.Models
     public class Post
     {
         [Key]
-        public int PostId { get; set; }
+        public int Id { get; set; }
 
         [Required]
         public int UserId { get; set; }

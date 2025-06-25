@@ -37,7 +37,7 @@ public class HomeController : Controller
         var postsWithComments = posts.Select(post => new PostWithCommentsViewModel
         {
             Post = post,
-            Comments = _commentService.GetCommentsByPost(post.PostId),
+            Comments = _commentService.GetCommentsByPost(post.Id),
         }).ToList();
 
         // Pass user and posts to the view using a ViewModel or ViewBag

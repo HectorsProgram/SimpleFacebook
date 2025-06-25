@@ -44,16 +44,16 @@ namespace SimpleFacebook.Services
 
             _context.Friendships.Add(friendRequest);
 
-            // var notification = new Notification
-            // {
-            //     SenderId = senderId,
-            //     ReceiverId = receiverId,
-            //     Message = "sent you a friend request.",
-            //     Type = "FriendRequest",
-            //     CreatedAt = DateTime.UtcNow
-            // };
+            var notification = new Notification
+            {
+                SenderId = senderId,
+                ReceiverId = receiverId,
+                Message = "sent you a friend request.",
+                Type = "FriendRequest",
+                CreatedAt = DateTime.UtcNow
+            };
 
-            // _context.Notifications.Add(notification);
+            _context.Notifications.Add(notification);
 
             await _context.SaveChangesAsync();
         }
@@ -94,16 +94,16 @@ namespace SimpleFacebook.Services
 
             request.Status = "Accepted";
 
-            // var notification = new Notification
-            // {
-            //     SenderId = request.ReceiverId,
-            //     ReceiverId = request.SenderId,
-            //     Message = "accepted your friend request.",
-            //     Type = "FriendRequestAccepted",
-            //     CreatedAt = DateTime.UtcNow
-            // };
+            var notification = new Notification
+            {
+                SenderId = request.ReceiverId,
+                ReceiverId = request.SenderId,
+                Message = "accepted your friend request.",
+                Type = "FriendRequestAccepted",
+                CreatedAt = DateTime.UtcNow
+            };
 
-            // _context.Notifications.Add(notification);
+            _context.Notifications.Add(notification);
 
             await _context.SaveChangesAsync();
         }
