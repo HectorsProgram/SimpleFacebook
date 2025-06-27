@@ -14,5 +14,6 @@ namespace SimpleFacebook.Data
         public DbSet<Notification> Notifications { get; set; } // Optional, for notifications
         public DbSet<Like> Likes { get; set; } // Optional
         public DbSet<Friendships> Friendships { get; set; } // For friend requests
+        public DbSet<Media> Media { get; set; } // For media files in posts
     }
 }

@@ -19,5 +19,8 @@ namespace SimpleFacebook.Models
 
         [ForeignKey("UserId")]
         public User User { get; set; }
+
+        public virtual ICollection<Media> Media { get; set; }
+
     }
 }

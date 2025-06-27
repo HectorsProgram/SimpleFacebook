@@ -9,7 +9,8 @@
     var userName = firstPost?.User?.Username ?? "User";
     var firstName = firstPost?.User?.FirstName ?? "User";
     var lastName = firstPost?.User?.LastName ?? "User";
-
+    var friendCount = firstPost?.User?.FriendCount ?? 0;
+    var coverPhoto = "/uploads/cover-photos/default.png";
 }
 
     <script src="~/js/profile/friendResponse.js"></script>
@@ -20,123 +21,135 @@
 
 
 <div>
+
     <!-- Cover Photo Area -->
-    <div class="position-relative mb-4" style="background-color: #e9ecef; height: 220px; border-radius: 8px;">
+    <div class="position-relative" style="background-color: #e9ecef; height: 220px; border-radius: 8px; overflow: hidden;">
+        <!-- Cover Photo -->
+        <img src="@coverPhoto" alt="Cover Photo" style="object-fit: cover; width: 100%; height: 100%;" />
+
+        <!-- Edit Button -->
         <button class="btn btn-light position-absolute end-0 mt-3 me-3">Edit Cover Photo</button>
-        <div class="bg-primary text-white">Cover Box</div>
-        <div class="bg-secondary text-white">Padding Box</div>
+    </div>
+    <div class="position-relative mb-4" style="background-color: #e9ecef; height:">
         <!-- Profile Info Row -->
-        <div class="position-absolute start-0 bottom-0 w-100 px-4 pb-3">
+        <div class="start-0 bottom-0 w-100 px-4 py-3">
+
             <div class="d-flex align-items-end justify-content-between">
                 
                 <!-- Profile Picture + Username -->
                 <div class="d-flex align-items-center">
                     <!-- Profile Picture -->
-                    <div class="rounded-circle border border-3 bg-white overflow-hidden" style="width: 140px; height: 140px; margin-top: 70px;">
+                    <div class="rounded-circle border border-3 bg-white overflow-hidden" style="width: 160px; height: 160px; margin-top: -80px;">
                         <img src="@profilePic" alt="Profile Picture" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
 
                     <!-- Username -->
-                    <h2 class="ms-3 mb-0 text-dark">@firstName @lastName</h2>
+                    <div class="ms-3 text-dark">
+                        <!-- Username -->
+                        <h2 class="mb-1">@firstName @lastName</h2>
+                        <!-- Friend Count -->
+                        @if (friendCount >= 2)
+                        {
+                            <p class="mb-0" style="font-size: 1rem;">@friendCount friends</p>
+                        }
+                    </div>
                 </div>
 
                 <!-- Buttons -->
                 <div class="d-flex gap-2">
-    @if (profileOwnerId == ownerPosts?.FirstOrDefault()?.CurrentUserId)
-    {
-        <!-- Own profile -->
-        <button class="btn btn-outline-secondary btn-sm">Add to Story</button>
-        <button class="btn btn-light btn-sm" onclick="loadAndOpenModal()">Edit Profile</button>
-        <div id="modalContainer"></div>
-    }
+                    @if (profileOwnerId == ownerPosts?.FirstOrDefault()?.CurrentUserId)
+                    {
+                        <!-- Own profile -->
+                        <button class="btn btn-outline-secondary btn-sm">Add to Story</button>
+                        <button class="btn btn-light btn-sm" onclick="loadAndOpenModal()">Edit Profile</button>
+                        <div id="modalContainer"></div>
+                    }
+                    else
+                    {
+                        if (Model.IsFriend)
+                        {
+                            <div id="friendContainer" data-user-id="@Model.ProfileOwnerId" data-request-id="@Model.FriendshipId"></div>
+                                
+                            @* <a asp-action="UnfriendUserProfile"
+                                asp-route-Id="@Model.ProfileOwnerId"
+                                asp-route-RequestId="@Model.FriendshipId"
+                                class="btn btn-Primary btn-sm">
+                                    Unfriend
+                            </a> *@
 
-    else
-    {
+                        }
+                        else if(Model.IsAddedByOwner)
+                        {
+                            <div id="responseDiv" style="position: relative; display: inline-block;">
+                                <button id="respond" onclick="togglePopup()" class="btn btn-primary btn-sm">
+                                    Respond
+                                </button>
 
-        if (Model.IsFriend)
-        {
-            <div id="friendContainer" data-user-id="@Model.ProfileOwnerId" data-request-id="@Model.FriendshipId"></div>
-                
-            @* <a asp-action="UnfriendUserProfile"
-                asp-route-Id="@Model.ProfileOwnerId"
-                asp-route-RequestId="@Model.FriendshipId"
-                class="btn btn-Primary btn-sm">
-                    Unfriend
-            </a> *@
+                                <div id="popup" style="
+                                    display: none;
+                                    position: absolute;
+                                    top: 100%;
+                                    left: 0;
+                                    margin-top: 4px;
+                                    padding: 10px;
+                                    background: white;
+                                    border: 1px solid #ccc;
+                                    border-radius: 5px;
+                                    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+                                    z-index: 999;
+                                ">
+                                    <button onclick="confirmProfileRequest(@Model.ProfileOwnerId, @Model.FriendshipId)" class="btn btn-success btn-sm">Confirm</button><br />
+                                    <button onclick="deleteProfileRequest()" class="btn btn-danger btn-sm mt-1">Delete Request</button>
+                                </div>
+                            </div>
+                        @Html.AntiForgeryToken()
+                        }      
+            else{
+            <!-- Stranger profile -->
+            @*  <form method="post" asp-controller="FriendRequest" asp-action="SendRequest" class="d-inline">
+                <input type="hidden" name="receiverId" value="@Model.ProfileUser.Id" />
+                <button type="submit" class="btn btn-primary btn-sm">Add Friend</button>
+            </form> *@
 
-        }
-        else if(Model.IsAddedByOwner)
-        {
-            <div id="responseDiv" style="position: relative; display: inline-block;">
-                <button id="respond" onclick="togglePopup()" class="btn btn-primary btn-sm">
-                    Respond
+                <button id="friendBtn"
+                        class="btn btn-sm @(Model.IsFriendRequestSent ? "btn-secondary" : "btn-primary")"
+                        data-user-id="@Model.ProfileOwnerId"
+                        data-status="@(Model.IsFriendRequestSent ? "sent" : "notSent")"
+                        onclick="toggleFriendRequest(this)">
+                    @(Model.IsFriendRequestSent ? "Cancel Request" : "Add Friend")
                 </button>
 
-                <div id="popup" style="
-                    display: none;
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    margin-top: 4px;
-                    padding: 10px;
-                    background: white;
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-                    z-index: 999;
-                ">
-                    <button onclick="confirmProfileRequest(@Model.ProfileOwnerId, @Model.FriendshipId)" class="btn btn-success btn-sm">Confirm</button><br />
-                    <button onclick="deleteProfileRequest()" class="btn btn-danger btn-sm mt-1">Delete Request</button>
-                </div>
-            </div>
-        @Html.AntiForgeryToken()
-        }      
-        else{
-        <!-- Stranger profile -->
-        @*  <form method="post" asp-controller="FriendRequest" asp-action="SendRequest" class="d-inline">
-            <input type="hidden" name="receiverId" value="@Model.ProfileUser.Id" />
-            <button type="submit" class="btn btn-primary btn-sm">Add Friend</button>
-        </form> *@
+                <script>
+                    async function toggleFriendRequest(button) {
+                        const userId = button.getAttribute("data-user-id");
+                        let status = button.getAttribute("data-status");
 
-            <button id="friendBtn"
-                    class="btn btn-sm @(Model.IsFriendRequestSent ? "btn-secondary" : "btn-primary")"
-                    data-user-id="@Model.ProfileOwnerId"
-                    data-status="@(Model.IsFriendRequestSent ? "sent" : "notSent")"
-                    onclick="toggleFriendRequest(this)">
-                @(Model.IsFriendRequestSent ? "Cancel Request" : "Add Friend")
-            </button>
+                        try {
+                            const response = await fetch(`/Profile/ToggleRequest/${userId}`, {
+                                method: 'POST'
+                            });
 
-            <script>
-                async function toggleFriendRequest(button) {
-                    const userId = button.getAttribute("data-user-id");
-                    let status = button.getAttribute("data-status");
+                            if (!response.ok) throw new Error("Server error");
 
-                    try {
-                        const response = await fetch(`/Profile/ToggleRequest/${userId}`, {
-                            method: 'POST'
-                        });
-
-                        if (!response.ok) throw new Error("Server error");
-
-                        const result = await response.json();
-                        if (result.status === "sent") {
-                            button.innerText = "Cancel Request";
-                            button.classList.remove("btn-primary");
-                            button.classList.add("btn-secondary");
-                            button.setAttribute("data-status", "sent");
-                        } else {
-                            button.innerText = "Add Friend";
-                            button.classList.remove("btn-secondary");
-                            button.classList.add("btn-primary");
-                            button.setAttribute("data-status", "notSent");
+                            const result = await response.json();
+                            if (result.status === "sent") {
+                                button.innerText = "Cancel Request";
+                                button.classList.remove("btn-primary");
+                                button.classList.add("btn-secondary");
+                                button.setAttribute("data-status", "sent");
+                            } else {
+                                button.innerText = "Add Friend";
+                                button.classList.remove("btn-secondary");
+                                button.classList.add("btn-primary");
+                                button.setAttribute("data-status", "notSent");
+                            }
+                        } catch (err) {
+                            alert("Something went wrong.");
+                            console.error(err);
                         }
-                    } catch (err) {
-                        alert("Something went wrong.");
-                        console.error(err);
                     }
-                }
-            </script>
-        }
+                </script>
+            }
 
         @* <button id="friendBtn" class="btn btn-primary btn-sm" onclick="toggleFriendAppearance(this)">
             Add Friend
@@ -161,6 +174,7 @@
     }
                 </div>
             </div>
+
         </div>
     </div>
 
@@ -188,7 +202,7 @@
 
     <div class="row">
         <!-- Left Column -->
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card mb-3">
                 <div class="card-header">Intro</div>
                 <div class="card-body">
@@ -208,7 +222,7 @@
             </div>
         </div>
         <!-- Center Column -->
-        <div class="col-md-6">
+        <div class="col-md-8">
             <div class="card mb-3">
                 <div class="card-header">Photos</div>
                 <div class="card-body d-flex flex-wrap gap-2">

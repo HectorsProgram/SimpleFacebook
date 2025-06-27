@@ -29,6 +29,7 @@ namespace SimpleFacebook.Models
 
         public string ProfilePicturePath { get; set; } = "/uploads/profile-pictures/default.png";
 
+        public int FriendCount { get; set; } = 0;
         public string Roles { get; set; } = "User"; // Default role
         //public ICollection<Post> Posts { get; set; }
     }

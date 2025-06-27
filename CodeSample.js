@@ -28,8 +28,8 @@ logout functionality ✅ Core
 user search ✅ Core
 
 PROFILE
-User Profiles. first last name, number of friends ✅ Core ⌛⌛⌛⌛⌛⌛⌛⌛
-=cover photo/edit cover photo ✅ Core
+🟢User Profiles. first last name, number of friends ✅ Core 
+=cover photo/edit cover photo ✅ Core 
 =edit profile button ✅ Core
 change Profile picture functnality ✅ Core
 Edit your own profile info ✅ Core
@@ -57,7 +57,7 @@ SHARED PAGE
 🟢Create posts ✅ Core 
 🟢Comment on posts ✅ Core 
 🟢View all posts on profile pages ✅ Core 
-posts with videos/images ✅ Core
+posts with videos/images ✅ Core ⌛⌛⌛⌛⌛⌛⌛⌛
 Optional: Like/Unlike ✅ Core
 5. Basic Messaging (Optional or Placeholder) 
 clone ui design from actual facebook site ✅ Core

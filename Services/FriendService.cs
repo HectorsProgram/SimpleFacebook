@@ -17,6 +17,7 @@ namespace SimpleFacebook.Services
         Task<IEnumerable<Friendships>> GetPendingRequestsAsync(int userId);
         Task<bool> IsFriendRequestPendingAsync(int senderId, int receiverId);
         Task<int> GetFriendshipIdAsync(int user, int friend);
+        Task<int> RecalculateAndUpdateFriendCountAsync(int userId);
         // Task<IEnumerable<User>> GetFriendsAsync(int userId);
         // Task<int> GetRequestId(int requestId);
     }
@@ -74,7 +75,7 @@ namespace SimpleFacebook.Services
         {
             var request = await _context.Friendships
                 .FirstOrDefaultAsync(r => r.Id == requestId && r.Status == "Accepted");
-                
+
             if (request == null) return;
 
             _context.Friendships.Remove(request);
@@ -138,6 +139,24 @@ namespace SimpleFacebook.Services
                     (f.SenderId == friend && f.ReceiverId == user));
 
             return friendship?.Id ?? 0;
+        }
+
+        public async Task<int> RecalculateAndUpdateFriendCountAsync(int userId)
+        {
+            var acceptedFriendsCount = await _context.Friendships
+                .Where(f =>
+                    f.Status == "Accepted" &&
+                    (f.SenderId == userId || f.ReceiverId == userId))
+                .CountAsync();
+
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+            if (user != null)
+            {
+                user.FriendCount = acceptedFriendsCount;
+                await _context.SaveChangesAsync();
+            }
+
+            return acceptedFriendsCount;
         }
 
     }

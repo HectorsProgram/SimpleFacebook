@@ -11,8 +11,8 @@ using SimpleFacebook.Data;
 namespace SimpleFacebook.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250611095137_TestDrop")]
-    partial class TestDrop
+    [Migration("20250625022650_AddFriendCountToUser")]
+    partial class AddFriendCountToUser
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,7 +48,7 @@ namespace SimpleFacebook.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("SimpleFacebook.Models.Friend.Friendship", b =>
+            modelBuilder.Entity("SimpleFacebook.Models.Friend.Friendships", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -60,7 +60,7 @@ namespace SimpleFacebook.Migrations
                     b.Property<int>("SenderId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("SentAt")
+                    b.Property<DateTime>("SentTime")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Status")
@@ -73,7 +73,7 @@ namespace SimpleFacebook.Migrations
 
                     b.HasIndex("SenderId");
 
-                    b.ToTable("FriendshipsData");
+                    b.ToTable("Friendships");
                 });
 
             modelBuilder.Entity("SimpleFacebook.Models.Like", b =>
@@ -86,6 +86,9 @@ namespace SimpleFacebook.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Username")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
@@ -135,7 +138,7 @@ namespace SimpleFacebook.Migrations
 
             modelBuilder.Entity("SimpleFacebook.Models.Post", b =>
                 {
-                    b.Property<int>("PostId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -149,7 +152,7 @@ namespace SimpleFacebook.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("PostId");
+                    b.HasKey("Id");
 
                     b.HasIndex("UserId");
 
@@ -164,6 +167,19 @@ namespace SimpleFacebook.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("FriendCount")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")
@@ -206,7 +222,7 @@ namespace SimpleFacebook.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("SimpleFacebook.Models.Friend.Friendship", b =>
+            modelBuilder.Entity("SimpleFacebook.Models.Friend.Friendships", b =>
                 {
                     b.HasOne("SimpleFacebook.Models.User", "Receiver")
                         .WithMany()

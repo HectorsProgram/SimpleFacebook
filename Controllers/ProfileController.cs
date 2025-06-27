@@ -80,6 +80,8 @@ public class ProfileController : Controller
 
         bool isFriend = await _friendService.AreFriendsAsync(currentUserId, userId.Value);
 
+        await _friendService.RecalculateAndUpdateFriendCountAsync(userId.Value);
+
         // Console.WriteLine(isFriend);
         var userProfileModel = new UserProfileViewModel
         {

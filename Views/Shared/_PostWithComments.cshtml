@@ -41,13 +41,13 @@
     </div>
 
         <!-- New Comment Form -->
-    <form method="post" asp-controller="Comments" asp-action="AddComment">
-        <input type="hidden" name="PostId" value="@Model.Post.Id" />
-        <input type="hidden" name="returnAction" value="@returnAction" />
-        <input type="hidden" name="returnController" value="@returnController" />
-        <div class="input-group">
-            <input type="text" name="Content" class="form-control" placeholder="Write a comment..." required />
-            <button class="btn btn-primary" type="submit">Comment</button>
-        </div>
-    </form>
+        <form method="post" asp-controller="Comments" asp-action="AddComment">
+            <input type="hidden" name="PostId" value="@Model.Post.Id" />
+            <input type="hidden" name="returnAction" value="@returnAction" />
+            <input type="hidden" name="returnController" value="@returnController" />
+                <div class="input-group">
+                    <input type="text" name="Content" class="form-control" placeholder="Write a comment..." required />
+                    <button class="btn btn-primary" type="submit">Comment</button>
+                </div>
+        </form>
     </li>
